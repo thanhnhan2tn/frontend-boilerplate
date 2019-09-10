@@ -1,0 +1,47 @@
+//- base layout
+block vars
+
+- bodyClass = bodyClass || ''
+- baseUrl = baseUrl || '/'
+- title = title || 'Frontend Boilerplate'
+- description = description || 'Webpack project starter with Pug, Sass, jQuery, Babel and Yarn'
+- keyword = keyword || 'Frontend, Boilerplate'
+- author = author || 'Frontend Boilerplate'
+
+doctype html
+html(lang="en")
+  head
+
+    //- Meta
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title=title
+    meta(name="description", content=description)
+    meta(name="keywords", content=keyword)
+    meta(name="robots", content="index, follow")
+    meta(name="author", content=author)
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="theme-color", content="#ff9900")
+    meta(name="msapplication-TileColor", content="#ff9900")
+    meta(name="msapplication-config" content=baseUrl + "browserconfig.xml")
+    link(rel="manifest", href=baseUrl + "manifest.json")
+
+    //- Favicons
+    link(rel="apple-touch-icon", sizes="180x180", href=baseUrl + "assets/images/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href=baseUrl + "assets/images/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href=baseUrl + "assets/images/favicon-16x16.png")
+    link(rel="shortcut icon", href=baseUrl + "assets/images/favicon.ico")
+    
+  body(class=bodyClass)
+
+    //- Header
+    include ../components/header.pug
+    
+    //- block content
+    block content
+
+    //- Footer
+    include ../components/footer.pug
+
+    //- block scripts
+    block scripts

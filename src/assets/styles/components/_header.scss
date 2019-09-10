@@ -1,0 +1,26 @@
+/* src/assets/styles/components/_header.scss  */
+
+.header {
+  
+  .brand {
+    text-transform: uppercase;
+  }
+
+  ul {
+    float: right;
+    li {
+      display: inline;
+      margin: 0 10px;
+    }
+  }
+    
+  }
+  
+  /*
+    Responsive
+  */
+  
+  @include media-breakpoint-down(sm) {
+  
+  }
+  

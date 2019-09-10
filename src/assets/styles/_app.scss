@@ -1,32 +1,32 @@
 /*
   Base
 */
-@import './base/fonts';
+@import './base/custom';
+
+/*
+  Bootstrap
+*/
+@import '../../../node_modules/bootstrap/scss/bootstrap';
 
 /*
   Utils
 */
-@import './utils/dimensions';
 @import './utils/mixins';
-@import './utils/colors';
-@import './utils/keyframes';
 
 /*
   Components
 */
+@import './components/header';
 @import './components/footer';
-@import './components/button';
-@import './components/link';
 
 /*
   Layout
 */
+@import './layout/structure';
 @import './layout/page';
-@import './layout/general';
 
 /*
   Pages
 */
 @import './pages/index';
 @import './pages/blog';
-@import './pages/contact';

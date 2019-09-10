@@ -23,7 +23,7 @@ exports.pages = function (env, folder = '') {
       options.minify = {
         removeComments: true,
         collapseWhitespace: true,
-        removeAttributeQuotes: true
+        removeAttributeQuotes: true,
       };
     }
 

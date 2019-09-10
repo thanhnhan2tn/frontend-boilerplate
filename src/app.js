@@ -3,8 +3,9 @@
 // Styles
 import 'styles/_app.scss';
 
+// Scripts
 $(document).ready(() => {
-  console.log('Ready!');
+  console.log('Frontend Boilerplate is ready!');
 
-  require('scripts/demo');
+  require('scripts/fn');
 });

@@ -9,10 +9,11 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 // Files
 const utils = require('./utils')
-const plugins = require('../postcss.config');
 
 // Configuration
 module.exports = env => {
+
+  const nodeEnv = env.NODE_ENV;
 
   return {
     context: path.resolve(__dirname, '../src'),
@@ -30,9 +31,11 @@ module.exports = env => {
     resolve: {
       extensions: ['.js'],
       alias: {
-        source: path.resolve(__dirname, '../src'), // Relative path of src
-        images: path.resolve(__dirname, '../src/assets/images'), // Relative path of images
-        fonts: path.resolve(__dirname, '../src/assets/fonts'), // Relative path of fonts
+        modules: path.resolve(__dirname, '../node_modules'),
+        source: path.resolve(__dirname, '../src'),
+        images: path.resolve(__dirname, '../src/assets/images'),
+        fonts: path.resolve(__dirname, '../src/assets/fonts'),
+        scripts: path.resolve(__dirname, '../src/assets/scripts'),
       }
     },
 
@@ -43,43 +46,32 @@ module.exports = env => {
       rules: [
         {
           test: /\.js$/,
-          exclude: /(node_modules|bower_components)/,
+          exclude: /node_modules/,
           use: [
-            {
-              loader: 'babel-loader',
-              options: { presets: ['@babel/preset-env'] }
-            }
+            { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } }
           ]
         },
         {
           test: /\.css$/,
           use: [
-            env === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
-            {
-              loader: 'css-loader',
-              options: {
-                importLoaders: 1,
-                sourceMap: true,
-              },
-            },
+            nodeEnv === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+            { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
           ],
         },
         {
           test: /\.scss$/,
           use: [
-            env === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, // creates style nodes from JS strings
-            { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } }, // translates CSS into CommonJS
+            nodeEnv === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+            { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
             'postcss-loader',
-            'sass-loader', // compiles Sass to CSS
+            'sass-loader',
           ],
         },
         {
           test: /\.pug$/,
           use: [
-            {
-              loader: 'pug-loader'
-            }
-          ]
+            { loader: 'pug-loader', options: { pretty: nodeEnv === 'development' } }
+          ], 
         },
         {
           test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
@@ -96,14 +88,6 @@ module.exports = env => {
             limit: 5000,
             name: 'assets/fonts/[name].[hash:7].[ext]'
           }
-        },
-        {
-          test: /\.(mp4)(\?.*)?$/,
-          loader: 'url-loader',
-          options: {
-            limit: 10000,
-            name: 'assets/videos/[name].[hash:7].[ext]'
-          }
         }
       ]
     },
@@ -119,12 +103,9 @@ module.exports = env => {
         cacheGroups: {
           default: false,
           vendors: false,
-          // vendor chunk
           vendor: {
             filename: 'assets/js/vendor.[hash:7].bundle.js',
-            // sync + async chunks
             chunks: 'all',
-            // import file path containing node_modules
             test: /node_modules/
           }
         }
@@ -137,6 +118,10 @@ module.exports = env => {
         { from: '../browserconfig.xml', to: 'browserconfig.xml' },
         { from: 'assets/images/favicons/android-chrome-192x192.png', to: 'assets/images/android-chrome-192x192.png' },
         { from: 'assets/images/favicons/android-chrome-256x256.png', to: 'assets/images/android-chrome-256x256.png' },
+        { from: 'assets/images/favicons/apple-touch-icon.png', to: 'assets/images/apple-touch-icon.png' },
+        { from: 'assets/images/favicons/favicon-16x16.png', to: 'assets/images/favicon-16x16.png' },
+        { from: 'assets/images/favicons/favicon-32x32.png', to: 'assets/images/favicon-32x32.png' },
+        { from: 'assets/images/favicons/favicon.ico', to: 'assets/images/favicon.ico' },
         { from: 'assets/images/favicons/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
       ]),
       new MiniCssExtractPlugin({
@@ -148,15 +133,18 @@ module.exports = env => {
         Pages
       */
 
-      // // Desktop page
+      // Home page
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: 'views/index.pug',
         inject: true
       }),
 
+      // pages/ folder
       ...utils.pages(env),
-      ...utils.pages(env, 'blog'),
+
+      // pages/list folder
+      ...utils.pages(env, 'list'),
 
       new webpack.ProvidePlugin({
         $: 'jquery',
