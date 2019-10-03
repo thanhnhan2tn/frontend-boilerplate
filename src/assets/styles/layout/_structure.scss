@@ -1,5 +1,15 @@
 /* src/assets/styles/layout/_structure.scss  */
 
-body {
+html, body  {
   font-family: $quicksand;
+  font-size: 14px;
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
 }

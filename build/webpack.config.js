@@ -22,7 +22,7 @@ module.exports = env => {
     },
     output: {
       path: path.resolve(__dirname, '../dist'),
-      publicPath: '/',
+      publicPath: './',
       filename: 'assets/js/[name].[hash:7].bundle.js'
     },
     devServer: {
@@ -54,14 +54,14 @@ module.exports = env => {
         {
           test: /\.css$/,
           use: [
-            nodeEnv === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+            { loader: nodeEnv === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, options: { publicPath: '../../' }},
             { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
           ],
         },
         {
           test: /\.scss$/,
           use: [
-            nodeEnv === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+            { loader: nodeEnv === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, options: { publicPath: '../../' }},
             { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
             'postcss-loader',
             'sass-loader',
@@ -71,7 +71,7 @@ module.exports = env => {
           test: /\.pug$/,
           use: [
             { loader: 'pug-loader', options: { pretty: nodeEnv === 'development' } }
-          ], 
+          ],
         },
         {
           test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,

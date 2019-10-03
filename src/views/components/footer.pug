@@ -1,4 +1,19 @@
-//- src/views/components/footer.pug
-
-footer.footer
-  p Copyright &copy; 2019 Spider Company Limited.
+footer#footer.footer
+  .container
+    p.float-left
+      | © 2019
+      |
+      a(href="#") Company
+    ul.inline.float-right
+      li
+        a(href="https://github.com" title="GitHub")
+          i.fab.fa-github
+          span.visuallyhidden GitHub
+      li
+        a(href="https://twitter.com" title="Twitter")
+          i.fab.fa-twitter
+          span.visuallyhidden Twitter
+      li
+        a(href="https://facebook.com" title="Facebook")
+          i.fab.fa-facebook
+          span.visuallyhidden Facebook

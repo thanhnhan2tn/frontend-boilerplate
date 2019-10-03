@@ -1,9 +1,10 @@
-//- src/views/components/header.pug
-
-header.header
-  nav(role="navigation")
-    img(src=require('source/assets/images/logo.png'), width="35")
-    a.brand Frontend Boilerplate
-    ul
-      li: a(href="/") Home
-      li: a(href="/list") List
+//- Header
+header.pg-header#header
+  .container
+    .grid
+      .cell
+        nav.nav.nav-inline
+          a.nav-link(href="./") Home
+      .cell.float-right
+        nav.nav.nav-inline
+          a.nav-link(href="./list") List

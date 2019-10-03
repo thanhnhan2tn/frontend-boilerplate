@@ -1,7 +1,12 @@
 /* src/assets/styles/components/_footer.scss  */
 
 .footer {
-  
+  flex-shrink: 0;
+
+  .container {
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+  }
 }
 
 /*
