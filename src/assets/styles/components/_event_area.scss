@@ -1,0 +1,24 @@
+$color_1: #011e53;
+$background_color_1: #fff;
+
+/*--Event Area section starts-----*/
+.event-area {
+  padding-bottom: 50px;
+  margin: 0px;
+  width: 100%;
+  background-color: $background_color_1;
+  text-align: center;
+  word-break: keep-all;
+  color: $color_1;
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

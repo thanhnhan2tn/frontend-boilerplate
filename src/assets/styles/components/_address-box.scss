@@ -1,0 +1,113 @@
+$color_1: #fff;
+$color_2: #f26547;
+$background_color_1: #31a7f1;
+$background_color_2: #f8c927;
+$background_color_3: #f1d410;
+
+/*address boxes start*/
+/*address boxes end*/
+.box {
+  text-align: center;
+  padding: 50px 0 25px;
+  margin-top: -122px;
+  position: relative;
+  word-break: break-all;
+  background-color: $background_color_1;
+  border-bottom: 5px solid transparent;
+  &:hover {
+    background-color: $background_color_2;
+    border-bottom: 5px solid #31a7f1;
+    .box-icon {
+      i {
+        color: $color_2;
+        background: #fff;
+      }
+    }
+    .backside {
+      background-color: $background_color_1;
+    }
+  }
+  .box-icon {
+    i {
+      width: 100%;
+      height: 100%;
+      line-height: 58px;
+      border-radius: 50%;
+      background: #000;
+      font-size: 30px;
+      color: $color_1;
+      -webkit-transition: all 0.5s ease 0s;
+      -o-transition: all 0.5s ease 0s;
+      transition: all 0.5s ease 0s;
+    }
+  }
+  .backside {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    padding: 10px;
+    transform: translateX(-50%);
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    background-color: $background_color_3;
+  }
+  .title {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: $color_1;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+  .box-content {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: $color_1;
+    position: relative;
+    z-index: 1;
+  }
+  .more-info {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    color: $color_1;
+    padding: 5px 20px;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    text-transform: uppercase;
+    &:hover {
+      background: #fff;
+      color: $color_2;
+    }
+  }
+}
+@media only screen and (max-width: 990px) {
+  .box {
+    margin-top: 50px;
+    &:hover {
+      margin-top: 15px;
+      z-index: 1;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .box {
+    margin-top: 50px;
+    &:hover {
+      margin-top: 2px;
+      z-index: 1;
+    }
+  }
+}

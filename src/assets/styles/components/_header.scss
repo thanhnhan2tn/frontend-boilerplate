@@ -1,26 +1,59 @@
-/* src/assets/styles/components/_header.scss  */
-
+/*--------------------------------------
+-------- HEADER AREA CSS START --------
+---------------------------------------*/
 .header {
-  
-  .brand {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.4s;
+  width: 100%;
+  z-index: 99;
+  padding: 18px 0;
+}
+.mainmenu {
+  text-align: right;
+  display: block;
+  li {
+    display: inline-block;
     text-transform: uppercase;
-  }
-
-  ul {
-    float: right;
-    li {
-      display: inline;
-      margin: 0 10px;
+    a {
+      display: inline-block;
+      color: #fff;
+      position: relative;
+      padding: 5px 16px;
+      margin: 0 3px;
+      border: 1px solid transparent;
+    }
+    a.appao-btn {
+      margin-left: 55px;
     }
   }
-    
+  ul {
+    li {
+      a {
+        &:hover {
+          border: 1px solid #fff;
+        }
+      }
+      a.active {
+        border: 1px solid #fff;
+      }
+    }
   }
-  
-  /*
-    Responsive
-  */
-  
-  @include media-breakpoint-down(sm) {
-  
+}
+.slicknav_menu {
+  padding: 0;
+  background: transparent;
+  display: none;
+  a.active {
+    border: 1px solid #fff;
   }
-  
+}
+.header.sticky {
+  border-bottom: 1px solid #fff;
+  background: #000529;
+  background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%);
+  background: -webkit-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%);
+  background: linear-gradient(to right, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%);
+  padding: 10px 0;
+}

@@ -2,6 +2,7 @@
 block vars
 
 - bodyClass = bodyClass || ''
+- bodyData = bodyData || ''
 - baseUrl = baseUrl || './'
 - title = title || 'Frontend Boilerplate'
 - description = description || 'Webpack project starter with Pug, Sass, jQuery, Babel and Yarn'
@@ -33,7 +34,7 @@ html(lang="en")
     link(rel="icon", type="image/png", sizes="16x16", href=baseUrl + "assets/images/favicon-16x16.png")
     link(rel="shortcut icon", href=baseUrl + "assets/images/favicon.ico")
 
-  body(class=bodyClass)
+  body(class=bodyClass, data-spy="scroll" data-target=".header" data-offset="50")
 
     //- Header
     include ../components/header.pug

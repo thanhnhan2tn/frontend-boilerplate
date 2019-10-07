@@ -1,14 +1,232 @@
-/* src/assets/styles/pages/_blog.scss  */
-
-.blog-page {
-
+/*pagination start*/
+/*pagination end*/
+/*tagcloud area starts*/
+/*tagcloud area ends*/
+/*recent-blog-post area starts*/
+/*recent-blog-post area ends*/
+/*twetter area starts*/
+.top-pad {
+  padding-top: 100px;
+}
+.blog-pad {
+  padding-top: 11px;
+}
+.blog-area {
+  color: #000;
+  margin-top: -2vw;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 2px solid #eee;
+    line-height: 150%;
+  }
+  tr {
+    &:hover {
+      color: #1f96f2;
+    }
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+.pagin {
+  margin-top: 44px;
+  a {
+    color: #1da1f2;
+    padding: 1vw;
+    border: 1px solid #1da1f2;
+    border-radius: 5px;
+    line-height: 1vw;
+    &:hover {
+      background-color: #1da1f2;
+      color: #fff;
+    }
+  }
+}
+.tag-area {
+  h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #2f3542;
+    line-height: 200%;
+  }
+}
+.tag {
+  border: 1px solid transparent;
+  color: #868e9f;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 200%;
+  padding: 0 15px;
+  &:hover {
+    color: #fff;
+    background-color: #f1d410;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding-bottom: 5px;
+  }
+}
+.r_area {
+  h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+.r-img {
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+}
+.r-blog {
+  p {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Roboto;
+    color: #108ff1;
+  }
+  h3 {
+    font-size: 16px;
+    color: #000;
+    margin-top: 0px;
+  }
+  h4 {
+    font-size: 13px;
+    color: #000;
+  }
+}
+.r-pad {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.twit {
+  padding-top: 20px;
+  h3 {
+    font-size: 20px;
+    color: #2f3542;
+    line-height: 200%;
+  }
+  p {
+    a {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 200%;
+    }
+  }
+}
+.twit-a {
+  color: #2f3542;
+  &:hover {
+    color: #2aa6f3;
+    font-weight: 700;
+  }
+}
+.btns {
+  color: #1da1f2;
+  font-size: 14px;
+}
+.days {
+  color: rgb(161, 172, 195);
+  font-size: 14px;
+  font-weight: 700;
 }
 
-
-/*
-  Responsive
-*/
-
-@include media-breakpoint-down(sm) {
-
+/*===================================================================
+                    Blog_Single page css
+====================================================================*/
+.blog-content {
+  padding-bottom: 20px;
+  p {
+    a {
+      font-size: 16px;
+      color: #000;
+      font-weight: 400;
+    }
+  }
+  .uppercase {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  h4 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+    word-break: keep-all;
+    padding-bottom: 45px;
+  }
+  h5 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    word-break: keep-all;
+    padding-bottom: 50px;
+    padding-top: 80px;
+  }
+  h6 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color: #929292;
+    word-break: keep-all;
+    padding-top: 140px;
+    padding-bottom: 76px;
+  }
+  .days {
+    font-size: 12px;
+  }
+  i {
+    &:hover {
+      color: #1793f1;
+    }
+    line-height: 1vw;
+    letter-spacing: 22px;
+    font-size: 15px;
+  }
+}
+.blog-area {
+  background-color: #fff;
+  padding-bottom: 100px;
+}
+.comment-area {
+  img {
+    max-width: 60px;
+    max-height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+  }
+}
+.btn-comment {
+  background-color: #31a7f1;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 25px 49px 25px;
+  &:hover {
+    color: #31a7f1;
+    background-color: #fff;
+    border: 1px solid #31a7f1;
+  }
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 40px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #eee;
 }

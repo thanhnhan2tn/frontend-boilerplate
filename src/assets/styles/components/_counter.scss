@@ -1,0 +1,32 @@
+$color_1: #fff;
+$background_color_1: #333333;
+
+.counter3 {
+  padding-bottom: 10px;
+}
+.counter-container {
+  padding-right: 4vw;
+  padding-left: 4vw;
+}
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #f1d410;
+  left: 0;
+  right: 0;
+  margin: auto;
+  .overlay {
+    width: 150px;
+    height: 150px;
+    background-color: $background_color_1;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 29px;
+    color: $color_1;
+    line-height: 60px;
+  }
+}

@@ -1,10 +1,28 @@
 //- Header
-header.pg-header#header
+header.header
   .container
-    .grid
-      .cell
-        nav.nav.nav-inline
-          a.nav-link(href="./") Home
-      .cell.float-right
-        nav.nav.nav-inline
-          a.nav-link(href="./list") List
+    .row.flexbox-center
+      .col-lg-2.col-md-3.col-6
+        .logo
+          a(href='#home')
+            img(src='assets/images/uploads/logo.png' alt='logo')
+      .col-lg-10.col-md-9.col-6
+        .responsive-menu
+        .mainmenu
+          ul#primary-menu
+            li
+              a.nav-link.active(href='#home') Home
+            li
+              a.nav-link(href='#feature') Feature
+            li
+              a.nav-link(href='#screenshot') Screenshot
+            li
+              a.nav-link(href='#pricing') Pricing
+            li
+              a.nav-link(href='#team') Team
+            li
+              a.nav-link(href='#blog') Blog
+            li
+              a.nav-link(href='#contact') Contact Us
+            li
+              a.appao-btn(href='#') Download

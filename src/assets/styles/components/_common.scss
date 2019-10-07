@@ -1,0 +1,96 @@
+body {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  font-family: $font-family;
+  -webkit-tap-highlight-color: #fff;
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+}
+
+::-moz-selection,
+::selection {
+  text-shadow: none;
+  background: #000;
+}
+
+img {
+  &::selection,
+  &::-moz-selection {
+    color: white;
+    background: transparent;
+  }
+}
+
+hr.light {
+  border-color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.pad-35 {
+  padding-top: 35px;
+}
+
+.pad-15 {
+  padding-top: 15px;
+}
+
+.pad-100 {
+  padding-top: 100px;
+}
+
+.pad-60 {
+  padding-top: 60px;
+}
+
+.pad-140 {
+  padding-top: 140px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}

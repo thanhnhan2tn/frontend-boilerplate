@@ -26,6 +26,7 @@ module.exports = env => {
       filename: 'assets/js/[name].[hash:7].bundle.js'
     },
     devServer: {
+      publicPath: '/',
       contentBase: path.resolve(__dirname, '../src'),
     },
     resolve: {
@@ -61,7 +62,7 @@ module.exports = env => {
         {
           test: /\.scss$/,
           use: [
-            { loader: nodeEnv === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, options: { publicPath: '../../' }},
+            { loader: nodeEnv === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, options: nodeEnv === 'development' ? {} : { publicPath: '../../' }},
             { loader: 'css-loader', options: { importLoaders: 1, sourceMap: true } },
             'postcss-loader',
             'sass-loader',
@@ -77,7 +78,7 @@ module.exports = env => {
           test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
           loader: 'url-loader',
           options: {
-            limit: 3000,
+            limit: 100,
             name: 'assets/images/[name].[hash:7].[ext]'
           }
         },
@@ -85,7 +86,7 @@ module.exports = env => {
           test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
           loader: 'url-loader',
           options: {
-            limit: 5000,
+            limit: 100,
             name: 'assets/fonts/[name].[hash:7].[ext]'
           }
         }
@@ -122,7 +123,8 @@ module.exports = env => {
         { from: 'assets/images/favicons/favicon-16x16.png', to: 'assets/images/favicon-16x16.png' },
         { from: 'assets/images/favicons/favicon-32x32.png', to: 'assets/images/favicon-32x32.png' },
         { from: 'assets/images/favicons/favicon.ico', to: 'assets/images/favicon.ico' },
-        { from: 'assets/images/favicons/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
+        { from: 'assets/images/favicons/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' },
+        { from: 'assets/images/uploads', to: 'assets/images/uploads' }
       ]),
       new MiniCssExtractPlugin({
         filename: 'assets/css/[name].[hash:7].bundle.css',
@@ -144,7 +146,7 @@ module.exports = env => {
       ...utils.pages(env),
 
       // pages/list folder
-      ...utils.pages(env, 'list'),
+      // ...utils.pages(env, 'list'),
 
       new webpack.ProvidePlugin({
         $: 'jquery',

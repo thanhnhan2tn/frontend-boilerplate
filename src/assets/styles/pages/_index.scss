@@ -1,14 +1,66 @@
-/* src/assets/styles/pages/_index.scss  */
 
-.home-page {
-  margin: 0;
+.page-header-home2 {
+  background-color: #000 !important;
 }
 
 
-/*
-  Responsive
-*/
+/*navber customize for home_2*/
 
-@include media-breakpoint-down(sm) {
-  margin: 1px;
+.navbar-home2 {
+  background-color: #000 !important;
+  font-family: lato;
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  border: 0px;
+}
+
+
+/*banner starts--*/
+
+.banner {
+  padding-top: 130px;
+  padding-bottom: 240px;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: lato;
+  overflow: hidden;
+  background-color: #000;
+  word-break: break-all;
+}
+
+.banner-pad {
+  padding-left: 115px;
+}
+
+.banner .btn-register {
+  color: #dff0d8;
+  border: 1px solid #FFF;
+  padding: 18px 56px;
+  border-radius: 4px;
+  font-weight: 400;
+  background-color: #337ab7;
+}
+
+.banner .btn-register:hover {
+  color: #0b82e8;
+  background-color: #fff;
+  border-color: #0b82e8;
+}
+
+.banner h1 {
+  font-size: 72px;
+  font-weight: 700;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.banner p {
+  font-size: 36px;
+  font-weight: 400;
+  color: #fff;
+  padding-bottom: 48px;
 }

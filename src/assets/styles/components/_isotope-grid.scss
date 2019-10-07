@@ -1,0 +1,84 @@
+/*------Isotope grid start-----*/
+.gallery-item {
+  width: 33.333333%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-grid {
+  width: 33.333333%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.border_img {
+  border: 15px solid #f3f8fb;
+  width: 100%;
+}
+.image_roll {
+  position: relative;
+  width: 100%;
+  &:hover {
+    .image-cover {
+      opacity: 0.7;
+    }
+  }
+}
+.image-cover {
+  background-color: #5c00a1;
+  border: 15px solid #f3f8fb;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+.text {
+  color: #fff;
+  text-transform: uppercase;
+  padding-left: 15px;
+  text-align: left;
+  i {
+    float: left;
+    color: #fff;
+    padding-left: 20px;
+    padding-top: 30px;
+    font-size: 25px;
+  }
+  h4 {
+    position: absolute;
+    bottom: 35px;
+    font-size: 20px;
+    text-decoration: underline;
+  }
+  p {
+    font-size: 15px;
+    bottom: 10px;
+    position: absolute;
+  }
+}
+@media (max-width: 991px) {
+  .portfolio-grid {
+    width: 50%;
+  }
+}
+@media (max-width: 605px) {
+  .portfolio-grid {
+    width: 100%;
+  }
+}
+@media (max-width: 340px) {
+  .text {
+    h4 {
+      font-size: 15px;
+    }
+  }
+  p {
+    font-size: 10px;
+  }
+}

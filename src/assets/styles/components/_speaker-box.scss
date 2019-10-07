@@ -1,0 +1,192 @@
+$color_1: #000;
+$color_2: #f8c927;
+$color_3: #fff;
+$color_4: #070913;
+$background_color_1: #fff;
+$background_color_2: #222b5f;
+$background_color_3: #070913;
+$background_color_4: #0a0d1c;
+$background_color_5: #31a7f1;
+$background_color_6: #f8c927;
+
+/*start ->Featured Speaker section*/
+/* Speaker Boxes css  */
+.speaker-area {
+  margin: 0px;
+  width: 100%;
+  margin-top: 130px;
+  padding-bottom: 150px;
+  background-color: $background_color_1;
+  word-break: break-all;
+  h1 {
+    padding-top: 40px;
+    font-size: 60px;
+    font-weight: 700;
+    color: $color_1;
+    text-transform: uppercase;
+    span {
+      color: $color_2;
+    }
+  }
+  p {
+    color: $color_1;
+    padding-top: 40px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+.speaker-info {
+  position: relative;
+  height: 350px;
+  background-color: $background_color_2;
+  .push {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color_3;
+    background: #0a0d1c;
+    text-transform: uppercase;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 25px;
+    width: 30px;
+    bottom: 0;
+    transform: translate(0%, 800%);
+  }
+  > img {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+.speaker-info2 {
+  position: absolute;
+  height: 350px;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: $background_color_3;
+  p {
+    color: $color_3;
+    font-size: 16px;
+    padding-top: 0px;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+    span {
+      color: $color_2;
+    }
+  }
+  h4 {
+    color: $color_3;
+    font-size: 18px;
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .pull {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color_3;
+    background: #f8c927;
+    text-transform: uppercase;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 25px;
+    width: 30px;
+    transform: translate(0%, 0%);
+  }
+}
+.icon-area {
+  text-align: center;
+  padding: 20px 0px 10px;
+  bottom: 78px;
+  color: $color_3;
+  position: absolute;
+  width: 100%;
+  background-color: $background_color_4;
+  z-index: 1;
+  letter-spacing: 10px;
+  a {
+    &:hover {
+      color: $color_2;
+    }
+  }
+}
+.dev-name {
+  text-align: center;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 78px;
+  background-color: $background_color_5;
+  border-bottom: 5px solid #f8c927;
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: $color_3;
+  }
+  p {
+    font-size: 14px;
+    color: $color_3;
+    padding: 0px;
+  }
+}
+.social-icon {
+  text-align: center;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: $background_color_6;
+  border-bottom: 5px solid #31a7f1;
+  padding: 25px 0px 60px;
+  letter-spacing: 10px;
+  a {
+    &:hover {
+      color: $color_4;
+    }
+  }
+}
+.speaker-box {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  margin-top: 40px;
+  .speaker-info {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    position: relative;
+  }
+  .speaker-info2 {
+    -webkit-transform: translateY(-350px);
+    -moz-transform: translateY(350px);
+    -o-transform: translateY(350px);
+    -ms-transform: translateY(350px);
+    transform: translateY(350px);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.speaker-info-click {
+  -webkit-transform: translateX(350px);
+  -moz-transform: translateX(350px);
+  -o-transform: translateX(350px);
+  -ms-transform: translateX(350px);
+  transform: translateY(-350px);
+}

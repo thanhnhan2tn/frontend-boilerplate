@@ -1,0 +1,74 @@
+/*sponsor area starts*/
+
+.sponsor-area {
+  padding-bottom: 50px;
+  margin: 0px;
+  width: 100%;
+  background-color: #fff;
+  font-family: Roboto;
+  text-align: center;
+  word-break: keep-all;
+  color: #011e53;
+}
+
+.sponsor-logo {
+  padding-bottom: 130px;
+}
+
+.sponsor-area h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.sponsor-area p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.border1_img {
+  border: 1px solid #f3f8fb;
+  width: 100%;
+}
+
+.sponsor-area .portfolio-captio a:hover {
+  background-color: #f8c927;
+}
+
+.single-client-logo {
+  border: 1px solid #ccc;
+  height: 190px;
+  margin-bottom: 3px;
+  padding: 40px 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.single-client-logo::before {
+  background: #f8c927 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+
+.single-client-logo:hover::before {
+  opacity: 1;
+}
+
+.single-client-logo a {
+  display: block;
+}
+
+.single-client-logo a img {
+  position: relative;
+}

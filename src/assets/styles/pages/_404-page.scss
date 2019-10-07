@@ -1,0 +1,84 @@
+/*===================================================================
+                    404 page css
+====================================================================*/
+/*Section1 starts*/
+/*------end------*/
+/* section2 starts */
+.section1-error-area {
+  background: rgba(0, 0, 0, 0) url("../assets/images/bg/other-top-bg.jpg") repeat scroll left top / cover;
+  height: 440px;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 155px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  &::before {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  h1 {
+    color: #fff;
+    font-size: 60px;
+    position: relative;
+    z-index: 9;
+  }
+  p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    z-index: 9;
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      color: #b9a832;
+    }
+  }
+}
+.section2-error-area {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #000000;
+  overflow: hidden;
+  padding-top: 143px;
+  padding-bottom: 143px;
+  h1 {
+    font-size: 48px;
+    font-weight: 400;
+    color: #000000;
+    padding-top: 58px;
+    padding-bottom: 83px;
+    span {
+      font-weight: 400;
+      color: #f0d106;
+    }
+    span.color3 {
+      font-weight: 400;
+      color: #ff1f1f;
+    }
+  }
+  a {
+    color: #fff;
+    background-color: rgba(16, 143, 238, 1);
+    border: 1px solid rgba(16, 143, 238, 1);
+    padding: 20px 45px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 700;
+    &:hover {
+      color: #0b82e8;
+      background-color: #fff;
+      border-color: #0b82e8;
+    }
+  }
+}

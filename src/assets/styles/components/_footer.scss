@@ -1,18 +1,73 @@
-/* src/assets/styles/components/_footer.scss  */
-
-.footer {
-  flex-shrink: 0;
-
-  .container {
-    padding-top: 1rem;
-    border-top: 1px solid #ccc;
+/*===================================================================
+                     Common Footer css start
+====================================================================*/
+.footer-area {
+  position: relative;
+  text-align: center;
+  background-color: #09152c;
+  padding-top: 135px;
+  padding-bottom: 80px;
+  font-family: Roboto;
+  .go-top-area {
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    a {
+      &::before {
+        background-color: #fff;
+        border: 9px solid #09152c;
+        content: "";
+        display: block;
+        height: 72px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: -35px;
+        transform: rotate(45deg);
+        width: 72px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        font-family: FontAwesome;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: -10px;
+      }
+      i {
+        color: transparent;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding-top: 89px;
+    span {
+      font-size: 18px;
+      font-weight: 400;
+      color: #f8c927;
+      text-transform: uppercase;
+    }
   }
 }
-
-/*
-  Responsive
-*/
-
-@include media-breakpoint-down(sm) {
-
+.go-top-area {
+  a {
+    color: #000;
+    &:hover {
+      color: #f1d410;
+    }
+  }
+}
+.footer-social {
+  line-height: 3vw;
+  letter-spacing: 2vw;
+  font-size: 25px;
 }

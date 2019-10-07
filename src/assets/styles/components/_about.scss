@@ -1,0 +1,34 @@
+.about-area {
+	text-align: center;
+}
+.single-about-box {
+	padding: 25px;
+	transition: all 0.4s;
+	i {
+		&::before {
+			color: #0074da;
+			font-size: 40px;
+			transition: all 0.4s;
+			display: block;
+		}
+	}
+	&:hover {
+		box-shadow: 0 0 5px #ccc;
+		i {
+			&::before {
+				color: #000;
+			}
+		}
+	}
+	h4 {
+		margin: 25px 0 15px;
+	}
+}
+.single-about-box.active {
+	box-shadow: 0 0 5px #ccc;
+	i {
+		&::before {
+			color: #000;
+		}
+	}
+}

@@ -1,9 +1,9 @@
 /*
 Bootstrap
 */
-@import '../../../node_modules/bootstrap/scss/functions';
-@import '../../../node_modules/bootstrap/scss/variables';
-@import '../../../node_modules/bootstrap/scss/mixins';
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+// @import '../../../node_modules/bootstrap/scss/variables';
+// @import '../../../node_modules/bootstrap/scss/mixins';
 
 /*
 FontAwesome
@@ -12,13 +12,19 @@ $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 @import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
 // @import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
 @import '../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+
+$slick-font-path: "~slick-slider/slick/fonts/";
+$slick-loader-path: "~slick-slider/slick/";
+@import '~slick-slider/slick/slick.scss';
+@import '~slick-slider/slick/slick-theme.scss';
 /*
   Base
 */
 @import './base/variables';
 @import './utils/mixins';
+@import './base/reset';
 @import './base/fonts';
-@import './base/custom';
+// @import './base/custom';
 
 /*
   Utils
@@ -29,24 +35,38 @@ $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 /*
   Components
 */
-@import './base/gridsystem';
-@import './components/typography';
+// @import './base/gridsystem';
+// @import './components/typography';
+@import './components/common';
 @import './components/buttons';
-@import './components/forms';
-@import './components/tables';
-@import './components/header';
+@import 'components/header';
+@import './components/hero';
+// @import './components/tables';
 @import './components/footer';
 @import './components/navs';
-@import './components/cards';
+// @import './components/cards';
+@import './components/address-box';
+@import './components/counter';
+@import './components/event_area';
+@import './components/isotope-grid';
+@import './components/speaker-box';
+@import './components/footer';
+
+
 
 /*
   Layout
 */
 @import './layout/structure';
 @import './layout/page';
+@import './layout/reponsive';
 
 /*
   Pages
 */
 @import './pages/index';
 @import './pages/blog';
+
+
+// Libraries
+@import 'libraries/slicknav.css'
